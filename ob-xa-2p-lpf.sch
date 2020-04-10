@@ -20238,7 +20238,7 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <busses>
 </busses>
 <nets>
-<net name="0V" class="0">
+<net name="0V" class="1">
 <segment>
 <pinref part="SUPPLY13" gate="0V" pin="0V"/>
 <pinref part="R21" gate="G$1" pin="1"/>
