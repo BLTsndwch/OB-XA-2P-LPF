@@ -22646,7 +22646,7 @@ NS Package M08A</description>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="default" width="0.762" drill="0">
 </class>
 </classes>
 <parts>
@@ -22712,8 +22712,8 @@ NS Package M08A</description>
 <part name="FREQ_CV_2" library="aarons_library" deviceset="OFFBOARD2JACKALT" device=""/>
 <part name="SUPPLY26" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="0V" device=""/>
 <part name="CV2" library="pot" library_urn="urn:adsk.eagle:library:331" deviceset="TRIM_US-" device="B64Y" package3d_urn="urn:adsk.eagle:package:22690/1" value="100k"/>
-<part name="R27" library="pot" library_urn="urn:adsk.eagle:library:331" deviceset="TRIM_US-" device="B64Y" package3d_urn="urn:adsk.eagle:package:22690/1" value="100k"/>
-<part name="R28" library="pot" library_urn="urn:adsk.eagle:library:331" deviceset="TRIM_US-" device="B64Y" package3d_urn="urn:adsk.eagle:package:22690/1" value="100k"/>
+<part name="FINE" library="pot" library_urn="urn:adsk.eagle:library:331" deviceset="TRIM_US-" device="B64Y" package3d_urn="urn:adsk.eagle:package:22690/1" value="100k"/>
+<part name="COARSE" library="pot" library_urn="urn:adsk.eagle:library:331" deviceset="TRIM_US-" device="B64Y" package3d_urn="urn:adsk.eagle:package:22690/1" value="100k"/>
 <part name="SUPPLY27" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="0V" device=""/>
 <part name="SUPPLY28" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="0V" device=""/>
 <part name="SUPPLY29" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="0V" device=""/>
@@ -22970,11 +22970,11 @@ NS Package M08A</description>
 <attribute name="NAME" x="243.84" y="43.18" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="241.3" y="43.18" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="R27" gate="G$1" x="220.98" y="2.54" smashed="yes" rot="R180">
+<instance part="FINE" gate="G$1" x="220.98" y="2.54" smashed="yes" rot="R180">
 <attribute name="NAME" x="226.06" y="5.08" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="223.52" y="5.08" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="R28" gate="G$1" x="226.06" y="25.4" smashed="yes" rot="R180">
+<instance part="COARSE" gate="G$1" x="226.06" y="25.4" smashed="yes" rot="R180">
 <attribute name="NAME" x="231.14" y="27.94" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="228.6" y="27.94" size="1.778" layer="96" rot="R270"/>
 </instance>
@@ -23123,12 +23123,12 @@ NS Package M08A</description>
 <pinref part="SUPPLY27" gate="0V" pin="0V"/>
 </segment>
 <segment>
-<pinref part="R28" gate="G$1" pin="E"/>
+<pinref part="COARSE" gate="G$1" pin="E"/>
 <pinref part="SUPPLY28" gate="0V" pin="0V"/>
 <wire x1="226.06" y1="15.24" x2="226.06" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R27" gate="G$1" pin="E"/>
+<pinref part="FINE" gate="G$1" pin="E"/>
 <pinref part="SUPPLY29" gate="0V" pin="0V"/>
 <wire x1="220.98" y1="-7.62" x2="220.98" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
@@ -23336,12 +23336,12 @@ NS Package M08A</description>
 <pinref part="P+4" gate="1" pin="+15V"/>
 </segment>
 <segment>
-<pinref part="R28" gate="G$1" pin="A"/>
+<pinref part="COARSE" gate="G$1" pin="A"/>
 <wire x1="226.06" y1="35.56" x2="226.06" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="P+5" gate="1" pin="+15V"/>
 </segment>
 <segment>
-<pinref part="R27" gate="G$1" pin="A"/>
+<pinref part="FINE" gate="G$1" pin="A"/>
 <wire x1="220.98" y1="12.7" x2="220.98" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="P+6" gate="1" pin="+15V"/>
 </segment>
@@ -23594,7 +23594,7 @@ NS Package M08A</description>
 <pinref part="R24" gate="G$1" pin="1"/>
 <wire x1="205.74" y1="40.64" x2="218.44" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="40.64" x2="218.44" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="R28" gate="G$1" pin="S"/>
+<pinref part="COARSE" gate="G$1" pin="S"/>
 <wire x1="218.44" y1="25.4" x2="220.98" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -23603,7 +23603,7 @@ NS Package M08A</description>
 <pinref part="R25" gate="G$1" pin="1"/>
 <wire x1="205.74" y1="30.48" x2="210.82" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="30.48" x2="210.82" y2="2.54" width="0.1524" layer="91"/>
-<pinref part="R27" gate="G$1" pin="S"/>
+<pinref part="FINE" gate="G$1" pin="S"/>
 <wire x1="210.82" y1="2.54" x2="215.9" y2="2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -23615,22 +23615,24 @@ NS Package M08A</description>
 <wire x1="66.04" y1="0" x2="66.04" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$29" class="0">
+<net name="+15V_IN" class="0">
 <segment>
 <pinref part="L1" gate="G$1" pin="1"/>
 <wire x1="-12.7" y1="10.16" x2="-15.24" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="10.16" x2="-15.24" y2="0" width="0.1524" layer="91"/>
 <pinref part="POWER_IN" gate="A" pin="1"/>
 <wire x1="-15.24" y1="0" x2="-20.32" y2="0" width="0.1524" layer="91"/>
+<label x="-15.24" y="5.08" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
-<net name="N$31" class="0">
+<net name="-15V_IN" class="0">
 <segment>
 <pinref part="L2" gate="G$1" pin="1"/>
 <wire x1="-12.7" y1="-17.78" x2="-15.24" y2="-17.78" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="-17.78" x2="-15.24" y2="-7.62" width="0.1524" layer="91"/>
 <pinref part="POWER_IN" gate="A" pin="4"/>
 <wire x1="-15.24" y1="-7.62" x2="-20.32" y2="-7.62" width="0.1524" layer="91"/>
+<label x="-15.24" y="-20.32" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 </nets>
