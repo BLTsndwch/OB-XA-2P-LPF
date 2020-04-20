@@ -20560,12 +20560,33 @@ NS Package M08A</description>
 <text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="+15V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
+<symbol name="-15V" urn="urn:adsk.eagle:symbol:26938/1" library_version="1">
+<wire x1="-1.27" y1="1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="1.27" y2="1.905" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="0.635" x2="0" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.286" x2="1.27" y2="0.635" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="-15V" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="+15V" urn="urn:adsk.eagle:component:26967/1" prefix="P+" library_version="1">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="+15V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="-15V" urn="urn:adsk.eagle:component:26965/1" prefix="P-" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="-15V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -20606,7 +20627,6 @@ NS Package M08A</description>
 <part name="SUPPLY13" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="0V" device=""/>
 <part name="V/OCT_ADJ" library="pot" library_urn="urn:adsk.eagle:library:331" deviceset="TRIM_US-" device="S63P" package3d_urn="urn:adsk.eagle:package:22705/1" value="10k"/>
 <part name="SUPPLY9" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+15V" device=""/>
-<part name="SUPPLY10" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="-5V" device=""/>
 <part name="FREQ_CV_1" library="aarons_library" deviceset="OFFBOARD2JACKALT" device=""/>
 <part name="SUPPLY14" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="0V" device=""/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-EU" device="E1.8-4" package3d_urn="urn:adsk.eagle:package:23336/2" value="15u"/>
@@ -20627,7 +20647,7 @@ NS Package M08A</description>
 <part name="AUDIO_OUT" library="aarons_library" deviceset="OFFBOARD2JACKALT" device=""/>
 <part name="SUPPLY7" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="0V" device=""/>
 <part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="100k"/>
-<part name="R15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="270"/>
+<part name="R15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="1K5"/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="050-025X075" package3d_urn="urn:adsk.eagle:package:23637/1" value="300p"/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="050-025X075" package3d_urn="urn:adsk.eagle:package:23637/1" value="300p"/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="0V" device=""/>
@@ -20674,6 +20694,7 @@ NS Package M08A</description>
 <part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="0V" device=""/>
 <part name="RES" library="pot" library_urn="urn:adsk.eagle:library:331" deviceset="TRIM_US-" device="B64Y" package3d_urn="urn:adsk.eagle:package:22690/1" value="100k"/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+15V" device=""/>
+<part name="P-1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="-15V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -20759,9 +20780,6 @@ less than 7905 datasheet.</text>
 <instance part="SUPPLY9" gate="+15V" x="129.54" y="35.56" smashed="yes">
 <attribute name="VALUE" x="127" y="38.735" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY10" gate="-5V" x="139.7" y="5.08" smashed="yes">
-<attribute name="VALUE" x="137.16" y="0.381" size="1.778" layer="96"/>
-</instance>
 <instance part="FREQ_CV_1" gate="G$1" x="228.6" y="60.96" smashed="yes">
 <attribute name="NAME" x="224.79" y="64.008" size="1.778" layer="95"/>
 </instance>
@@ -20832,7 +20850,7 @@ less than 7905 datasheet.</text>
 </instance>
 <instance part="R15" gate="G$1" x="139.7" y="17.78" smashed="yes" rot="R90">
 <attribute name="NAME" x="138.2014" y="16.51" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="143.002" y="13.97" size="1.778" layer="96" rot="R90"/>
+<attribute name="VALUE" x="143.002" y="16.51" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="C4" gate="G$1" x="109.22" y="15.24" smashed="yes">
 <attribute name="NAME" x="110.744" y="15.621" size="1.778" layer="95"/>
@@ -21000,6 +21018,9 @@ less than 7905 datasheet.</text>
 </instance>
 <instance part="P+1" gate="1" x="53.34" y="15.24" smashed="yes">
 <attribute name="VALUE" x="50.8" y="10.16" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="P-1" gate="1" x="139.7" y="5.08" smashed="yes">
+<attribute name="VALUE" x="137.16" y="2.54" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -21425,18 +21446,6 @@ less than 7905 datasheet.</text>
 </net>
 <net name="-5V" class="0">
 <segment>
-<pinref part="SUPPLY10" gate="-5V" pin="-5V"/>
-<pinref part="R15" gate="G$1" pin="1"/>
-<wire x1="139.7" y1="7.62" x2="139.7" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="10.16" x2="139.7" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="10.16" x2="144.78" y2="10.16" width="0.1524" layer="91"/>
-<junction x="139.7" y="10.16"/>
-<wire x1="144.78" y1="10.16" x2="144.78" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="20.32" x2="147.32" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="C11" gate="G$1" pin="-"/>
-<wire x1="147.32" y1="17.78" x2="147.32" y2="20.32" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="IC2" gate="A1" pin="VO"/>
 <wire x1="96.52" y1="-15.24" x2="93.98" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="C9" gate="G$1" pin="2"/>
@@ -21514,6 +21523,18 @@ less than 7905 datasheet.</text>
 <pinref part="SUPPLY25" gate="G$1" pin="-15V"/>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="193.04" y1="15.24" x2="193.04" y2="17.78" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R15" gate="G$1" pin="1"/>
+<wire x1="139.7" y1="7.62" x2="139.7" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="10.16" x2="139.7" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="10.16" x2="144.78" y2="10.16" width="0.1524" layer="91"/>
+<junction x="139.7" y="10.16"/>
+<wire x1="144.78" y1="10.16" x2="144.78" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="20.32" x2="147.32" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="C11" gate="G$1" pin="-"/>
+<wire x1="147.32" y1="17.78" x2="147.32" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="P-1" gate="1" pin="-15V"/>
 </segment>
 </net>
 <net name="N$2" class="0">
