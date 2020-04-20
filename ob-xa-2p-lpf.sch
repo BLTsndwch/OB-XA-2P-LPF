@@ -20541,6 +20541,42 @@ NS Package M08A</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="supply1" urn="urn:adsk.eagle:library:371">
+<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
+ GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
+ Please keep in mind, that these devices are necessary for the
+ automatic wiring of the supply signals.&lt;p&gt;
+ The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
+ In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
+ &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="+15V" urn="urn:adsk.eagle:symbol:26937/1" library_version="1">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-0.635" x2="0" y2="2.286" width="0.254" layer="94"/>
+<wire x1="0" y1="2.286" x2="-1.27" y2="-0.635" width="0.254" layer="94"/>
+<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="+15V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="+15V" urn="urn:adsk.eagle:component:26967/1" prefix="P+" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="+15V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -20561,7 +20597,7 @@ NS Package M08A</description>
 <part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="300k"/>
 <part name="R16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="18k"/>
 <part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="91k"/>
-<part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="33k"/>
+<part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="200k"/>
 <part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="33k"/>
 <part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="220k"/>
 <part name="R14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="100k"/>
@@ -20592,10 +20628,6 @@ NS Package M08A</description>
 <part name="SUPPLY7" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="0V" device=""/>
 <part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="100k"/>
 <part name="R15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="270"/>
-<part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="330k"/>
-<part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="-5V" device=""/>
-<part name="RES_CV" library="aarons_library" deviceset="OFFBOARD2JACKALT" device=""/>
-<part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="0V" device=""/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="050-025X075" package3d_urn="urn:adsk.eagle:package:23637/1" value="300p"/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="050-025X075" package3d_urn="urn:adsk.eagle:package:23637/1" value="300p"/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="0V" device=""/>
@@ -20639,6 +20671,9 @@ NS Package M08A</description>
 <part name="SUPPLY31" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+15V" device=""/>
 <part name="C14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="050-025X075" package3d_urn="urn:adsk.eagle:package:23637/1" value="0u1"/>
 <part name="C15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="050-025X075" package3d_urn="urn:adsk.eagle:package:23637/1" value="0u1"/>
+<part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="0V" device=""/>
+<part name="RES" library="pot" library_urn="urn:adsk.eagle:library:331" deviceset="TRIM_US-" device="B64Y" package3d_urn="urn:adsk.eagle:package:22690/1" value="100k"/>
+<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+15V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -20690,9 +20725,9 @@ less than 7905 datasheet.</text>
 <attribute name="NAME" x="87.63" y="92.4814" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="87.63" y="97.282" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R7" gate="G$1" x="55.88" y="12.7" smashed="yes" rot="R180">
-<attribute name="NAME" x="59.69" y="11.2014" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="59.69" y="16.002" size="1.778" layer="96" rot="R180"/>
+<instance part="R7" gate="G$1" x="66.04" y="10.16" smashed="yes" rot="R270">
+<attribute name="NAME" x="67.5386" y="13.97" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="62.738" y="13.97" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="R18" gate="G$1" x="154.94" y="88.9" smashed="yes" rot="R270">
 <attribute name="NAME" x="156.4386" y="92.71" size="1.778" layer="95" rot="R270"/>
@@ -20798,19 +20833,6 @@ less than 7905 datasheet.</text>
 <instance part="R15" gate="G$1" x="139.7" y="17.78" smashed="yes" rot="R90">
 <attribute name="NAME" x="138.2014" y="16.51" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="143.002" y="13.97" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="R9" gate="G$1" x="66.04" y="5.08" smashed="yes" rot="R270">
-<attribute name="NAME" x="67.5386" y="8.89" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="62.738" y="8.89" size="1.778" layer="96" rot="R270"/>
-</instance>
-<instance part="SUPPLY5" gate="-5V" x="66.04" y="-5.08" smashed="yes">
-<attribute name="VALUE" x="63.5" y="-9.779" size="1.778" layer="96"/>
-</instance>
-<instance part="RES_CV" gate="G$1" x="40.64" y="10.16" smashed="yes" rot="MR0">
-<attribute name="NAME" x="44.45" y="13.208" size="1.778" layer="95" rot="MR0"/>
-</instance>
-<instance part="SUPPLY3" gate="0V" x="43.18" y="5.08" smashed="yes">
-<attribute name="VALUE" x="42.037" y="3.048" size="1.778" layer="96"/>
 </instance>
 <instance part="C4" gate="G$1" x="109.22" y="15.24" smashed="yes">
 <attribute name="NAME" x="110.744" y="15.621" size="1.778" layer="95"/>
@@ -20969,6 +20991,16 @@ less than 7905 datasheet.</text>
 <attribute name="NAME" x="19.304" y="2.921" size="1.778" layer="95"/>
 <attribute name="VALUE" x="19.304" y="-2.159" size="1.778" layer="96"/>
 </instance>
+<instance part="SUPPLY3" gate="0V" x="53.34" y="-10.16" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="54.483" y="-12.192" size="1.778" layer="96" rot="MR0"/>
+</instance>
+<instance part="RES" gate="G$1" x="53.34" y="2.54" smashed="yes">
+<attribute name="NAME" x="48.26" y="0" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="50.8" y="0" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="P+1" gate="1" x="53.34" y="15.24" smashed="yes">
+<attribute name="VALUE" x="50.8" y="10.16" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -21014,12 +21046,6 @@ less than 7905 datasheet.</text>
 <wire x1="119.38" y1="91.44" x2="116.84" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="91.44" x2="116.84" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="SUPPLY7" gate="0V" pin="0V"/>
-</segment>
-<segment>
-<pinref part="RES_CV" gate="G$1" pin="GND"/>
-<pinref part="SUPPLY3" gate="0V" pin="0V"/>
-<wire x1="40.64" y1="10.16" x2="43.18" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="10.16" x2="43.18" y2="7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SUPPLY6" gate="0V" pin="0V"/>
@@ -21114,6 +21140,11 @@ less than 7905 datasheet.</text>
 <pinref part="R27" gate="G$1" pin="E"/>
 <pinref part="SUPPLY29" gate="0V" pin="0V"/>
 <wire x1="220.98" y1="-7.62" x2="220.98" y2="-5.08" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="RES" gate="G$1" pin="A"/>
+<pinref part="SUPPLY3" gate="0V" pin="0V"/>
+<wire x1="53.34" y1="-7.62" x2="53.34" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CFI" class="0">
@@ -21305,6 +21336,11 @@ less than 7905 datasheet.</text>
 <pinref part="SUPPLY31" gate="+15V" pin="+15V"/>
 <wire x1="220.98" y1="12.7" x2="220.98" y2="10.16" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="RES" gate="G$1" pin="E"/>
+<wire x1="53.34" y1="12.7" x2="53.34" y2="10.16" width="0.1524" layer="91"/>
+<pinref part="P+1" gate="1" pin="+15V"/>
+</segment>
 </net>
 <net name="N$10" class="0">
 <segment>
@@ -21401,11 +21437,6 @@ less than 7905 datasheet.</text>
 <wire x1="147.32" y1="17.78" x2="147.32" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R9" gate="G$1" pin="2"/>
-<pinref part="SUPPLY5" gate="-5V" pin="-5V"/>
-<wire x1="66.04" y1="0" x2="66.04" y2="-2.54" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="IC2" gate="A1" pin="VO"/>
 <wire x1="96.52" y1="-15.24" x2="93.98" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="C9" gate="G$1" pin="2"/>
@@ -21426,21 +21457,10 @@ less than 7905 datasheet.</text>
 </net>
 <net name="N$17" class="0">
 <segment>
-<pinref part="R7" gate="G$1" pin="1"/>
-<wire x1="60.96" y1="12.7" x2="66.04" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="66.04" y1="12.7" x2="66.04" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="IRES"/>
 <wire x1="73.66" y1="20.32" x2="66.04" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="20.32" x2="66.04" y2="12.7" width="0.1524" layer="91"/>
-<junction x="66.04" y="12.7"/>
-</segment>
-</net>
-<net name="N$19" class="0">
-<segment>
-<pinref part="R7" gate="G$1" pin="2"/>
-<pinref part="RES_CV" gate="G$1" pin="SIGNAL"/>
-<wire x1="50.8" y1="12.7" x2="45.72" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="66.04" y1="15.24" x2="66.04" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$18" class="0">
@@ -21593,6 +21613,14 @@ less than 7905 datasheet.</text>
 <wire x1="210.82" y1="30.48" x2="210.82" y2="2.54" width="0.1524" layer="91"/>
 <pinref part="R27" gate="G$1" pin="S"/>
 <wire x1="210.82" y1="2.54" x2="215.9" y2="2.54" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$19" class="0">
+<segment>
+<pinref part="RES" gate="G$1" pin="S"/>
+<wire x1="58.42" y1="2.54" x2="66.04" y2="2.54" width="0.1524" layer="91"/>
+<pinref part="R7" gate="G$1" pin="2"/>
+<wire x1="66.04" y1="2.54" x2="66.04" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
