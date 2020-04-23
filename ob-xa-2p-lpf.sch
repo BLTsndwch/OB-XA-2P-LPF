@@ -22646,7 +22646,9 @@ NS Package M08A</description>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0.762" drill="0">
+<class number="0" name="default" width="0.4064" drill="0">
+</class>
+<class number="1" name="Power" width="0.762" drill="0">
 </class>
 </classes>
 <parts>
@@ -22699,7 +22701,7 @@ NS Package M08A</description>
 <part name="C12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-EU" device="E1.8-4" package3d_urn="urn:adsk.eagle:package:23336/2" value="10u"/>
 <part name="C13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-EU" device="E1.8-4" package3d_urn="urn:adsk.eagle:package:23336/2" value="10u"/>
 <part name="SUPPLY20" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="0V" device=""/>
-<part name="POWER_IN" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X4" device="" package3d_urn="urn:adsk.eagle:package:22407/2"/>
+<part name="PWR_IN" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X4" device="" package3d_urn="urn:adsk.eagle:package:22407/2"/>
 <part name="IC3" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="TL082" device="P" package3d_urn="urn:adsk.eagle:package:16409/2"/>
 <part name="SUPPLY23" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="0V" device=""/>
 <part name="SUPPLY24" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="0V" device=""/>
@@ -22918,7 +22920,7 @@ NS Package M08A</description>
 <instance part="SUPPLY20" gate="0V" x="-7.62" y="-7.62" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="-6.477" y="-9.652" size="1.778" layer="96" rot="MR0"/>
 </instance>
-<instance part="POWER_IN" gate="A" x="-22.86" y="-5.08" smashed="yes" rot="MR0">
+<instance part="PWR_IN" gate="A" x="-22.86" y="-5.08" smashed="yes" rot="MR0">
 <attribute name="NAME" x="-16.51" y="3.175" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="-16.51" y="-12.7" size="1.778" layer="96" rot="MR0"/>
 </instance>
@@ -23138,10 +23140,10 @@ NS Package M08A</description>
 <wire x1="55.88" y1="-10.16" x2="55.88" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="POWER_IN" gate="A" pin="2"/>
+<pinref part="PWR_IN" gate="A" pin="2"/>
 <wire x1="-20.32" y1="-2.54" x2="-7.62" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="-2.54" x2="-7.62" y2="-5.08" width="0.1524" layer="91"/>
-<pinref part="POWER_IN" gate="A" pin="3"/>
+<pinref part="PWR_IN" gate="A" pin="3"/>
 <wire x1="-7.62" y1="-5.08" x2="-20.32" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="SUPPLY20" gate="0V" pin="0V"/>
 <junction x="-7.62" y="-5.08"/>
@@ -23315,7 +23317,7 @@ NS Package M08A</description>
 <junction x="154.94" y="81.28"/>
 </segment>
 </net>
-<net name="+15V" class="0">
+<net name="+15V" class="1">
 <segment>
 <pinref part="RES" gate="G$1" pin="E"/>
 <wire x1="55.88" y1="10.16" x2="55.88" y2="7.62" width="0.1524" layer="91"/>
@@ -23475,7 +23477,7 @@ NS Package M08A</description>
 <pinref part="C5" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="-15V" class="0">
+<net name="-15V" class="1">
 <segment>
 <pinref part="SUPPLY25" gate="G$1" pin="-15V"/>
 <pinref part="R6" gate="G$1" pin="2"/>
@@ -23615,22 +23617,22 @@ NS Package M08A</description>
 <wire x1="66.04" y1="0" x2="66.04" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="+15V_IN" class="0">
+<net name="+15V_IN" class="1">
 <segment>
 <pinref part="L1" gate="G$1" pin="1"/>
 <wire x1="-12.7" y1="10.16" x2="-15.24" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="10.16" x2="-15.24" y2="0" width="0.1524" layer="91"/>
-<pinref part="POWER_IN" gate="A" pin="1"/>
+<pinref part="PWR_IN" gate="A" pin="1"/>
 <wire x1="-15.24" y1="0" x2="-20.32" y2="0" width="0.1524" layer="91"/>
 <label x="-15.24" y="5.08" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
-<net name="-15V_IN" class="0">
+<net name="-15V_IN" class="1">
 <segment>
 <pinref part="L2" gate="G$1" pin="1"/>
 <wire x1="-12.7" y1="-17.78" x2="-15.24" y2="-17.78" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="-17.78" x2="-15.24" y2="-7.62" width="0.1524" layer="91"/>
-<pinref part="POWER_IN" gate="A" pin="4"/>
+<pinref part="PWR_IN" gate="A" pin="4"/>
 <wire x1="-15.24" y1="-7.62" x2="-20.32" y2="-7.62" width="0.1524" layer="91"/>
 <label x="-15.24" y="-20.32" size="1.778" layer="95" rot="R90"/>
 </segment>
