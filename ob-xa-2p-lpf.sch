@@ -19186,31 +19186,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <text x="-1.143" y="-2.032" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="0V" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
-<symbol name="-15V" urn="urn:adsk.eagle:symbol:27009/1" library_version="2">
-<wire x1="-0.635" y1="-1.27" x2="0.635" y2="-1.27" width="0.1524" layer="94"/>
-<circle x="0" y="-1.27" radius="1.27" width="0.254" layer="94"/>
-<text x="-3.175" y="-4.699" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="-15V" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
-</symbol>
 </symbols>
 <devicesets>
 <deviceset name="0V" urn="urn:adsk.eagle:component:27034/1" prefix="SUPPLY" library_version="2">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="0V" symbol="0V" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="-15V" urn="urn:adsk.eagle:component:27064/1" prefix="SUPPLY" library_version="2">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="G$1" symbol="-15V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -22710,7 +22691,6 @@ NS Package M08A</description>
 <part name="R23" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="100k"/>
 <part name="R24" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="150k"/>
 <part name="R25" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="1M5"/>
-<part name="SUPPLY25" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="-15V" device=""/>
 <part name="FREQ_CV_2" library="aarons_library" deviceset="OFFBOARD2JACKALT" device=""/>
 <part name="SUPPLY26" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="0V" device=""/>
 <part name="CV2" library="pot" library_urn="urn:adsk.eagle:library:331" deviceset="TRIM_US-" device="B64Y" package3d_urn="urn:adsk.eagle:package:22690/1" value="100k"/>
@@ -22733,6 +22713,7 @@ NS Package M08A</description>
 <part name="P-2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="-15V" device=""/>
 <part name="L1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="L-US" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2"/>
 <part name="L2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="L-US" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2"/>
+<part name="P-3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="-15V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -22959,9 +22940,6 @@ NS Package M08A</description>
 <attribute name="NAME" x="204.47" y="28.9814" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="204.47" y="33.782" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="SUPPLY25" gate="G$1" x="193.04" y="12.7" smashed="yes">
-<attribute name="VALUE" x="189.865" y="8.001" size="1.778" layer="96"/>
-</instance>
 <instance part="FREQ_CV_2" gate="G$1" x="248.92" y="48.26" smashed="yes">
 <attribute name="NAME" x="245.11" y="51.308" size="1.778" layer="95"/>
 </instance>
@@ -23035,6 +23013,9 @@ NS Package M08A</description>
 <instance part="L2" gate="G$1" x="-5.08" y="-17.78" smashed="yes" rot="R90">
 <attribute name="NAME" x="0" y="-19.05" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="0" y="-13.97" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="P-3" gate="1" x="193.04" y="12.7" smashed="yes">
+<attribute name="VALUE" x="190.5" y="10.16" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -23479,11 +23460,6 @@ NS Package M08A</description>
 </net>
 <net name="-15V" class="1">
 <segment>
-<pinref part="SUPPLY25" gate="G$1" pin="-15V"/>
-<pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="193.04" y1="15.24" x2="193.04" y2="17.78" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="R15" gate="G$1" pin="1"/>
 <wire x1="142.24" y1="7.62" x2="142.24" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="10.16" x2="142.24" y2="12.7" width="0.1524" layer="91"/>
@@ -23508,6 +23484,11 @@ NS Package M08A</description>
 <pinref part="C14" gate="G$1" pin="2"/>
 <wire x1="12.7" y1="-12.7" x2="12.7" y2="-17.78" width="0.1524" layer="91"/>
 <junction x="12.7" y="-17.78"/>
+</segment>
+<segment>
+<pinref part="R6" gate="G$1" pin="2"/>
+<wire x1="193.04" y1="15.24" x2="193.04" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="P-3" gate="1" pin="-15V"/>
 </segment>
 </net>
 <net name="N$2" class="0">
